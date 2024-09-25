@@ -81,6 +81,11 @@ body {
   display: none;
 }
 
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+}
+
 /* Media Queries */
 
 /* Laptop */
