@@ -3,6 +3,9 @@
   --bg: #010101;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -176,7 +179,7 @@ body {
   font-style: italic;
   text-align: right;
   float: right;
-  line-height: 2.0;
+  line-height: 2;
   margin-bottom: 1rem;
 }
 
@@ -267,7 +270,7 @@ body {
 }
 
 /*Testimonie manies section */
-.testi-container{
+.testi-container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -275,24 +278,24 @@ body {
   text-align: center;
 }
 
-.header{
+.header {
   margin-bottom: 2rem;
 }
 
-.header p{
+.header p {
   letter-spacing: 2px;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.header h1{
-  font-family: 'Poppins', sans-serif;
+.header h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 900;
   color: #b6895b;
 }
 
-.testi-grid{
+.testi-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -300,7 +303,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.card{
+.card {
   padding: 2rem;
   display: grid;
   gap: 1rem;
@@ -310,24 +313,24 @@ body {
   cursor: pointer;
 }
 
-.card i{
+.card i {
   font-size: 2.5rem;
   color: black;
 }
 
-.card p{
+.card p {
   font-size: 1rem;
   font-weight: 500;
   color: black;
 }
 
-.card hr{
+.card hr {
   width: 40px;
   margin: auto;
   border: 1px solid #513c28;
 }
 
-.card img{
+.card img {
   width: 100px;
   height: 100px;
   margin: auto;
@@ -335,28 +338,28 @@ body {
   border: 1px solid black;
 }
 
-.card .name{
+.card .name {
   font-size: 0.9rem;
   font-weight: 400;
   color: black;
   transition: 0.3s;
 }
 
-.card .name:hover{
-  color:#b6895b
+.card .name:hover {
+  color: #b6895b;
 }
 
 .footer {
   text-align: center;
 }
 
-.footer h4{
+.footer h4 {
   font-size: 1.25rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
 
-.footer a{
+.footer a {
   display: inline-block;
   padding: 1rem 2rem;
   outline: none;
@@ -369,22 +372,45 @@ body {
   cursor: pointer;
 }
 
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
 
+footer .socials {
+  padding: 1rem 0;
+}
 
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
 
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
 
+footer .links {
+  margin-bottom: 1.4rem;
+}
 
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
 
+footer .credit {
+  font-size: 0.8rem;
+}
 
-
-
-
-
-
-
-
-
-
+footer .credit span {
+  color: var(--bg);
+  font-weight: 600;
+}
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
