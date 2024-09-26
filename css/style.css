@@ -146,18 +146,90 @@ body {
 
 /* About Section */
 .about {
-  padding: 8rem 7% 1.4rem;
+  padding: 4rem 7%;
 }
 
-.about h2 {
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 3rem;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; /* Beri jarak antara teks dan gambar */
 }
 
-.about h2 span {
+.about-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  color: var(--primary);
+  text-align: right;
+  line-height: 0.8;
+}
+
+.about .about-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+  text-align: right;
+  float: right;
+  line-height: 2.0;
+  margin-bottom: 1rem;
+}
+
+.about .about-logo span {
   color: var(--primary);
 }
+
+.about-text h3 {
+  clear: both;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: right;
+  line-height: 0.1;
+}
+
+.about-text p {
+  clear: both;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.about-img {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-img {
+    max-width: 100%;
+  }
+
+  .about-text {
+    margin-bottom: 2rem;
+  }
+}
+
+
 /* Media Queries */
 
 /* Laptop */
