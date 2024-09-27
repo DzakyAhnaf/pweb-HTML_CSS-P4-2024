@@ -1,6 +1,6 @@
 :root {
   --primary: #b6895b;
-  --bg: #010101;
+  --bg: #445565;
 }
 
 html {
@@ -213,7 +213,7 @@ body {
 
 .about-text p {
   clear: both;
-  font-size: 1.2rem;
+  font-size: 19.2px;
   color: #fff;
   text-align: right;
   font-weight: 200;
@@ -235,53 +235,95 @@ body {
 .menu {
   padding: 8rem 7% 1.4rem;
 }
+
 .menu h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 1rem;
+  color: white;
 }
-.menu h2 span {
+
+.menu h2 span{
   color: var(--primary);
 }
+
 .menu p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
+  margin-bottom: 50px;
   font-weight: 100;
   line-height: 1.6;
+  color: white;
+  font-size: 19.2px;
 }
-.menu .row {
+
+.menu-grid {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 5rem;
-  justify-content: center;
+  justify-content: space-around; /* Memastikan elemen tersebar merata */
+  align-items: flex-start;
+  gap: 1rem; /* Mengatur jarak antar container lebih kecil */
+  flex-wrap: wrap; /* Agar elemen bisa pindah baris jika layar lebih kecil */
+  margin-top: 10px;
 }
-.menu .row .menu-card {
+
+.menu-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  color: black;
+  width: 263px;  /* Ubah ini untuk mengatur lebar container */
+  height: 320px; /* Ubah ini untuk mengatur tinggi container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-img {
+  width: 100%; /* Mengatur lebar gambar sesuai dengan lebar container */
+  height: 206px; /* Ubah ini untuk mengatur tinggi gambar */
+  object-fit: cover; /* Memastikan gambar menyesuaikan container tanpa merusak proporsinya */
+}
+
+
+.menu-info {
+  padding: 1rem;
+  background-color: white;
+}
+
+.menu-info h3 {
+  font-size: 23px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  line-height: 25px;
+}
+
+.menu-info p {
+  font-size: 1.2rem;
+  color: #b6895b;
+  font-weight: 500;
+  text-align: right;
+  line-height: 10px;
+}
+
+.menu-button-container {
+  text-align: center; /* Posisikan tombol di kanan bawah section */
+  margin-top: 2rem;
+  margin-bottom: 64px;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: white;
   text-align: center;
-  padding-bottom: 4rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
-.menu .row .menu-card img {
-  border-radius: 50%;
-  width: 80%;
-}
-.menu .row .menu-card .menu-card-title {
-  margin: 1rem auto 0.5rem;
-}
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .about-text,
-  .about-img {
-    max-width: 100%;
-  }
-
-  .about-text {
-    margin-bottom: 2rem;
-  }
+.menu-button:hover {
+  background-color: #694e33;
 }
 
 /*Testimonie manies section */
@@ -291,6 +333,7 @@ body {
   margin: auto;
   padding: 1rem;
   text-align: center;
+  padding-top: 96px;
 }
 
 .header {
@@ -386,6 +429,112 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Full Menu Page Section */
+.menu-page {
+  padding: 8rem 7% 1.4rem;
+}
+
+.menu-page h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.menu-page p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Menu Highlight */
+.menu-page_highlight {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 2rem; /* Jarak dengan grid di bawah */
+  height: 300px;
+}
+
+.menu-page_highlight-img {
+  width: 50%; /* Atur lebar gambar */
+  height: 300px; /* Pastikan gambar memiliki tinggi sepanjang container */
+  object-fit: cover; /*Menyesuaikan gambar dengan container tanpa merusak proporsi */
+}
+
+.menu-page_highlight-info {
+  width: 35%;
+  text-align: left;
+}
+
+.menu-page_highlight-info h3 {
+  font-size: 2rem;
+  color: #b6895b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.menu-page_highlight-info h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.menu-page_highlight-info p {
+  font-size: 1.5rem;
+  text-align: left;
+  color: black;
+}
+
+.menu-page_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Membagi menjadi 4 kolom */
+  gap: 2rem; /* Jarak antar item */
+  margin-top: 3rem;
+}
+
+.menu-page_item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: black;
+  width: 100%; /* Sesuaikan ukuran item dengan grid */
+}
+
+.menu-page_img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-page_info {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-page_info h3 {
+  font-size: 1.5rem;
+}
+
+.menu-page_info p {
+  font-size: 1.2rem;
+  color: #b6895b;
+}
+
+.menu-page_info i {
+  font-size: 2rem;
+  color: #b6895b;
+}
+
 
 /* Footer */
 footer {
