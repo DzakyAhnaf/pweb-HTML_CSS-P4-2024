@@ -1,8 +1,11 @@
 :root {
   --primary: #b6895b;
-  --bg: #010101;
+  --bg: #445565;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -147,7 +150,17 @@ body {
 
 /* About Section */
 .about {
-  padding: 4rem 7%;
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2.3rem;
+}
+
+.about h2 span {
+  color: var(--primary);
 }
 
 .about-container {
@@ -163,24 +176,24 @@ body {
 }
 
 .about-text h2 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: var(--primary);
-  text-align: right;
+  text-align: center;
   line-height: 0.8;
 }
 
-.about .about-logo {
+.about .about-text h3 {
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
   font-style: italic;
   text-align: right;
   float: right;
-  line-height: 2.0;
+  line-height: 2;
   margin-bottom: 1rem;
 }
 
-.about .about-logo span {
+.about .about-text h3 span {
   color: var(--primary);
 }
 
@@ -193,12 +206,16 @@ body {
   line-height: 0.1;
 }
 
+.about-text h3 a {
+  color: #fff;
+}
+
 .about-text p {
   clear: both;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 19.2px;
   color: #fff;
   text-align: right;
+  font-weight: 200;
   line-height: 1.5;
 }
 
@@ -208,7 +225,7 @@ body {
 }
 
 .about-img img {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 10px;
 }
@@ -217,82 +234,121 @@ body {
 .menu {
   padding: 8rem 7% 1.4rem;
 }
+
 .menu h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.menu h2 span {
   color: var(--primary);
 }
+
 .menu p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
+  margin-bottom: 50px;
   font-weight: 100;
   line-height: 1.6;
+  color: white;
+  font-size: 19.2px;
 }
-.menu .row {
+
+.menu-grid {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 5rem;
-  justify-content: center;
+  justify-content: space-around; /* Memastikan elemen tersebar merata */
+  align-items: flex-start;
+  gap: 1rem; /* Mengatur jarak antar container lebih kecil */
+  flex-wrap: wrap; /* Agar elemen bisa pindah baris jika layar lebih kecil */
+  margin-top: 10px;
 }
-.menu .row .menu-card {
+
+.menu-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  color: black;
+  width: 263px;  /* Ubah ini untuk mengatur lebar container */
+  height: 320px; /* Ubah ini untuk mengatur tinggi container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-img {
+  width: 100%; /* Mengatur lebar gambar sesuai dengan lebar container */
+  height: 206px; /* Ubah ini untuk mengatur tinggi gambar */
+  object-fit: cover; /* Memastikan gambar menyesuaikan container tanpa merusak proporsinya */
+}
+
+
+.menu-info {
+  padding: 1rem;
+  background-color: white;
+}
+
+.menu-info h3 {
+  font-size: 23px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  line-height: 25px;
+}
+
+.menu-info p {
+  font-size: 1.2rem;
+  color: #b6895b;
+  font-weight: 500;
+  text-align: right;
+  line-height: 10px;
+}
+
+.menu-button-container {
+  text-align: center; /* Posisikan tombol di kanan bawah section */
+  margin-top: 2rem;
+  margin-bottom: 64px;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: white;
   text-align: center;
-  padding-bottom: 4rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
-.menu .row .menu-card img {
-  border-radius: 50%;
-  width: 80%;
-}
-.menu .row .menu-card .menu-card-title {
-  margin: 1rem auto 0.5rem;
-}
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .about-text,
-  .about-img {
-    max-width: 100%;
-  }
-
-  .about-text {
-    margin-bottom: 2rem;
-  }
+.menu-button:hover {
+  background-color: #694e33;
 }
 
 /*Testimonie manies section */
-.testi-container{
+.testi-container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
   text-align: center;
+  padding-top: 96px;
 }
 
-.header{
+.header {
   margin-bottom: 2rem;
 }
 
-.header p{
+.header p {
   letter-spacing: 2px;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.header h1{
-  font-family: 'Poppins', sans-serif;
+.header h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 900;
   color: #b6895b;
 }
 
-.testi-grid{
+.testi-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -300,7 +356,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.card{
+.card {
   padding: 2rem;
   display: grid;
   gap: 1rem;
@@ -310,24 +366,24 @@ body {
   cursor: pointer;
 }
 
-.card i{
+.card i {
   font-size: 2.5rem;
   color: black;
 }
 
-.card p{
+.card p {
   font-size: 1rem;
   font-weight: 500;
   color: black;
 }
 
-.card hr{
+.card hr {
   width: 40px;
   margin: auto;
   border: 1px solid #513c28;
 }
 
-.card img{
+.card img {
   width: 100px;
   height: 100px;
   margin: auto;
@@ -335,28 +391,28 @@ body {
   border: 1px solid black;
 }
 
-.card .name{
+.card .name {
   font-size: 0.9rem;
   font-weight: 400;
   color: black;
   transition: 0.3s;
 }
 
-.card .name:hover{
-  color:#b6895b
+.card .name:hover {
+  color: #b6895b;
 }
 
 .footer {
   text-align: center;
 }
 
-.footer h4{
+.footer h4 {
   font-size: 1.25rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
 
-.footer a{
+.footer a {
   display: inline-block;
   padding: 1rem 2rem;
   outline: none;
@@ -369,22 +425,45 @@ body {
   cursor: pointer;
 }
 
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
 
+footer .socials {
+  padding: 1rem 0;
+}
 
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
 
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
 
+footer .links {
+  margin-bottom: 1.4rem;
+}
 
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
 
+footer .credit {
+  font-size: 0.8rem;
+}
 
-
-
-
-
-
-
-
-
-
+footer .credit span {
+  color: var(--bg);
+  font-weight: 600;
+}
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
