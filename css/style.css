@@ -445,6 +445,7 @@ body {
 .footer a:hover {
   background-color: #b6895b;
 }
+
 /* Full Menu Page Section */
 .menu-page {
   padding: 8rem 7% 1.4rem;
@@ -453,7 +454,7 @@ body {
 .menu-page h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
   color: var(--primary);
 }
 
@@ -461,6 +462,7 @@ body {
   text-align: center;
   max-width: 30rem;
   margin: auto;
+  margin-bottom: 25px;
   font-weight: 100;
   line-height: 1.6;
   color: white;
@@ -478,32 +480,41 @@ body {
 }
 
 .menu-page_highlight-img {
-  width: 50%; /* Atur lebar gambar */
-  height: 300px; /* Pastikan gambar memiliki tinggi sepanjang container */
-  object-fit: cover; /*Menyesuaikan gambar dengan container tanpa merusak proporsi */
+  width: 50%; /* Tetap biarkan lebar mengikuti container */
+  height: 300px; /* Tinggi tetap */
+  object-fit: cover; /* Gambar tetap proporsional */
+  border-top-left-radius: 10px; /* Border radius hanya di sisi kiri atas */
+  border-bottom-left-radius: 10px; /* Border radius hanya di sisi kiri bawah */
+  border-top-right-radius: 0px; /* Pastikan sisi kanan tidak ada border-radius */
+  border-bottom-right-radius: 0px;
 }
+
 
 .menu-page_highlight-info {
-  width: 35%;
+  width: 45%; /* Lebarkan agar lebih dekat dengan gambar */
   text-align: left;
+  padding-left: 10px; /* Kurangi jarak padding agar lebih mepet */
 }
 
-.menu-page_highlight-info h3 {
+.menu-page_highlight-info h6 {
   font-size: 2rem;
   color: #b6895b;
-  margin-bottom: 0.5rem;
+  margin-top: 60px;
+  margin-bottom: 1px;
   text-align: left;
 }
 
 .menu-page_highlight-info h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
   text-align: left;
 }
 
 .menu-page_highlight-info p {
   font-size: 1.5rem;
   text-align: left;
+  margin-left: 1px;
+  margin-top: -5px;
   color: black;
 }
 
