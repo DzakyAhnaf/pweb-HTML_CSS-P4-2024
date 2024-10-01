@@ -155,7 +155,7 @@ body {
 /* About Section */
 .about,
 .menu {
-  padding: 8rem 7% 3.2rem;
+  padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
@@ -170,7 +170,7 @@ body {
   color: var(--primary);
 }
 
-.about-container {
+.about .about-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -633,12 +633,27 @@ footer .credit span {
     transform-origin: 0 0;
   }
 
-  .navbar .navbar-nav a:hover:after {
+  .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
 
   .about .about-container {
     flex-wrap: wrap;
+  }
+
+  .about .about-container .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .about-container .content {
+    padding: 0;
+  }
+
+  .about .about-container .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
   }
 }
 
